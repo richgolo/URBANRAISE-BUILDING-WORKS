@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------
+   UrbanRaise Building Works — design tokens
+   Brand: Deep Purple #5B2A86 · White · Charcoal #2B2B2B · Light Grey #E5E5E5
+------------------------------------------------------------------ */
+@theme {
+  --color-brand-50: #f5eefb;
+  --color-brand-100: #e7d6f1;
+  --color-brand-200: #cfaee3;
+  --color-brand-300: #b184d0;
+  --color-brand-400: #8a54b4;
+  --color-brand-500: #5b2a86; /* primary */
+  --color-brand-600: #4c2270;
+  --color-brand-700: #3b1a57;
+  --color-brand-800: #2b133f;
+  --color-brand-900: #1d0c2b;
+
+  --color-ink-700: #3a3a3a;
+  --color-ink-800: #2b2b2b; /* charcoal — architectural sections */
+  --color-ink-900: #1c1c1c;
+
+  --color-line: #e5e5e5; /* light grey — borders */
+  --color-surface: #f6f5f7; /* supporting background */
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgba(28, 28, 28, 0.04), 0 12px 32px -12px rgba(28, 28, 28, 0.18);
+  --shadow-lift: 0 2px 6px rgba(28, 28, 28, 0.06), 0 24px 48px -16px rgba(91, 42, 134, 0.28);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--color-ink-800);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--color-ink-900);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brand-500);
+    color: #fff;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+/* Scroll-reveal animation (paired with useInView) */
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .text-shadow-hero {
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  /* Blueprint grid used on dark architectural sections */
+  .bg-blueprint {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+}
