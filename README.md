@@ -24,9 +24,28 @@ yarn lint      # eslint
 | `/projects/:slug` | Individual project — name, location, type, status, scope of work, gallery + lightbox |
 | `/quote` | Request-a-quote form (see note below) |
 | `/contact` | Phone, WhatsApp, email, areas served, business hours, socials |
+| `/faq` | Accordion of common build questions (`src/data/faq.js`, draft answers) |
+| `/privacy`, `/terms` | Legal pages (`src/data/legal.js`, draft template) |
+
+The Home page also has a **Guarantees** section ("how we keep a build low-risk")
+— `src/components/sections/Guarantees.jsx`.
 
 Global: sticky header, footer, mobile Call / WhatsApp / Get-a-Quote bar,
 desktop floating WhatsApp button, scroll-reveal animations.
+
+## SEO & metadata
+
+- `useDocumentTitle(title, description)` (`src/lib/`) sets per-route `<title>`,
+  description, canonical, and Open-Graph / Twitter tags.
+- `index.html` carries the site-wide defaults + a `GeneralContractor` JSON-LD
+  block; `/faq` injects `FAQPage` JSON-LD.
+- `public/`: `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.svg`,
+  `favicon-32.png`, `apple-touch-icon.png`, `icon-512.png`, `og-image.png`
+  (1200×630 social card). Icon + OG sources: `src/assets/icon.svg`,
+  `src/assets/og-image.svg` — regenerate PNGs with `sips`.
+- ⚠️ Every URL uses the placeholder domain
+  `https://www.urbanraisebuildingworks.com` — replace before launch
+  (`site.js` `url`, `index.html`, `sitemap.xml`, `robots.txt`).
 
 ## Where the content lives
 
@@ -39,6 +58,8 @@ All copy and data is separated from components so it is easy to update:
 | `src/data/projects.js` | ⚠️ Project portfolio (currently **sample** projects) |
 | `src/data/content.js` | Process steps, "why UrbanRaise", About-page copy, ⚠️ testimonials (placeholder) |
 | `src/data/images.js` | ⚠️ All image URLs (currently hot-linked Unsplash placeholders) |
+| `src/data/faq.js` | ⚠️ FAQ questions & answers (draft) |
+| `src/data/legal.js` | ⚠️ Privacy & Terms content (draft template) |
 
 `⚠️` = placeholder data that must be replaced before launch. See
 [`CONTENT-NEEDED.md`](CONTENT-NEEDED.md).

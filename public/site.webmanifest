@@ -1,0 +1,14 @@
+{
+  "name": "UrbanRaise Building Works",
+  "short_name": "UrbanRaise",
+  "description": "Smart Design, Solid Buildings — construction & property development in Accra, Ghana.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5B2A86",
+  "icons": [
+    { "src": "/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

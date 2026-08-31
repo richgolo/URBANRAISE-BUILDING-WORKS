@@ -65,7 +65,11 @@ function Field({ label, htmlFor, required, error, children, className }) {
         {label} {required && <span className="text-brand-500">*</span>}
       </label>
       {children}
-      {error && <p className="mt-1 text-xs font-medium text-red-600">{error}</p>}
+      {error && (
+        <p id={`${htmlFor}-error`} className="mt-1 text-xs font-medium text-red-600">
+          {error}
+        </p>
+      )}
     </div>
   )
 }
@@ -227,6 +231,8 @@ export default function Quote() {
                     <input
                       id="name"
                       data-error={!!errors.name}
+                      aria-invalid={errors.name ? true : undefined}
+                      aria-describedby={errors.name ? 'name-error' : undefined}
                       className={inputClass}
                       value={values.name}
                       onChange={set('name')}
@@ -238,6 +244,8 @@ export default function Quote() {
                       id="email"
                       type="email"
                       data-error={!!errors.email}
+                      aria-invalid={errors.email ? true : undefined}
+                      aria-describedby={errors.email ? 'email-error' : undefined}
                       className={inputClass}
                       value={values.email}
                       onChange={set('email')}
@@ -249,6 +257,8 @@ export default function Quote() {
                       id="phone"
                       type="tel"
                       data-error={!!errors.phone}
+                      aria-invalid={errors.phone ? true : undefined}
+                      aria-describedby={errors.phone ? 'phone-error' : undefined}
                       className={inputClass}
                       value={values.phone}
                       onChange={set('phone')}
@@ -277,6 +287,8 @@ export default function Quote() {
                     <select
                       id="type"
                       data-error={!!errors.type}
+                      aria-invalid={errors.type ? true : undefined}
+                      aria-describedby={errors.type ? 'type-error' : undefined}
                       className={inputClass}
                       value={values.type}
                       onChange={set('type')}
@@ -326,6 +338,8 @@ export default function Quote() {
                     id="description"
                     rows={5}
                     data-error={!!errors.description}
+                    aria-invalid={errors.description ? true : undefined}
+                    aria-describedby={errors.description ? 'description-error' : undefined}
                     className={inputClass}
                     value={values.description}
                     onChange={set('description')}

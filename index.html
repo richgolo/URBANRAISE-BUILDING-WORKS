@@ -1,21 +1,106 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GH">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#5B2A86" />
+
+    <!-- icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <title>UrbanRaise Building Works — Smart Design, Solid Buildings</title>
+    <link rel="canonical" href="https://www.urbanraisebuildingworks.com/" />
     <meta
       name="description"
-      content="UrbanRaise Building Works — residential construction, apartment developments, renovations and project management. From concept to completed building. Smart Design, Solid Buildings."
+      content="UrbanRaise Building Works — residential construction, apartment developments, renovations and project management in Accra, Ghana. From concept to completed building. Smart Design, Solid Buildings."
     />
+
+    <!-- Open Graph / social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="UrbanRaise Building Works" />
+    <meta property="og:title" content="UrbanRaise Building Works — Smart Design, Solid Buildings" />
+    <meta
+      property="og:description"
+      content="Residential construction, apartment developments, renovations and project management in Accra, Ghana. From concept to completed building."
+    />
+    <meta property="og:url" content="https://www.urbanraisebuildingworks.com/" />
+    <meta property="og:image" content="https://www.urbanraisebuildingworks.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="UrbanRaise Building Works — Smart Design, Solid Buildings" />
+    <meta
+      name="twitter:description"
+      content="Residential construction, apartment developments, renovations and project management in Accra, Ghana."
+    />
+    <meta name="twitter:image" content="https://www.urbanraisebuildingworks.com/og-image.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>UrbanRaise Building Works — Smart Design, Solid Buildings</title>
+    <!-- hero image (LCP) — keep in sync with images.heroResidence in src/data/images.js -->
+    <link
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=70"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GeneralContractor",
+        "@id": "https://www.urbanraisebuildingworks.com/#business",
+        "name": "UrbanRaise Building Works",
+        "description": "Residential construction, apartment developments, renovations, building design and project management.",
+        "slogan": "Smart Design, Solid Buildings",
+        "url": "https://www.urbanraisebuildingworks.com",
+        "telephone": "+233543605740",
+        "image": "https://www.urbanraisebuildingworks.com/og-image.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "East Legon Hills",
+          "addressRegion": "Greater Accra",
+          "addressCountry": "GH"
+        },
+        "areaServed": [
+          "East Legon Hills",
+          "East Legon",
+          "Adjiringanor",
+          "Ashaley Botwe",
+          "Spintex",
+          "Greater Accra"
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "13:00"
+          }
+        ],
+        "knowsAbout": [
+          "Residential construction",
+          "Apartment development",
+          "Renovations and remodeling",
+          "Building design and planning",
+          "Construction project management"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

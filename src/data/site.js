@@ -13,6 +13,13 @@ export const site = {
   description:
     'UrbanRaise Building Works takes a client’s idea from concept to completed building — residential construction, apartment developments, renovations and professional project management.',
 
+  // TODO: real production domain (used for canonical URLs, sitemap, OG tags)
+  url: 'https://www.urbanraisebuildingworks.com',
+  // TODO: company registration number (Registrar-General's Department, Ghana)
+  registration: 'Registration number to be confirmed',
+  // Shown on the legal pages — update when they are reviewed
+  legalUpdated: 'August 2026',
+
   // Phone — 054 360 5740 (Ghana). WhatsApp assumed to be the same number.
   phoneDisplay: '+233 54 360 5740',
   phoneHref: 'tel:+233543605740',

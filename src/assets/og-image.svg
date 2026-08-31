@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#1c1c1c" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+  <rect x="7" y="7" width="1186" height="616" fill="none" stroke="#5b2a86" stroke-width="6" />
+
+  <!-- faint oversized watermark, bleeding off the right edge -->
+  <g transform="translate(830 40) scale(2.1)" opacity="0.1">
+    <path d="M80 250 V124 H66 L152.5 56 L239 124 H225 V250 Z" fill="#b98fdd" />
+  </g>
+
+  <!-- mark -->
+  <g transform="translate(96 92) scale(0.6)">
+    <path d="M80 250 V124 H66 L152.5 56 L239 124 H225 V250 Z" fill="#ffffff" />
+    <g fill="none" stroke="#1c1c1c" stroke-width="9" stroke-linecap="round">
+      <path d="M152.5 60 L152.5 84 A16 16 0 0 0 152.5 116 L152.5 150" />
+      <path d="M152.5 150 L152.5 182 A16 16 0 1 0 152.5 214 L152.5 250" />
+      <path d="M80 150 L100 150 A16 16 0 0 1 132 150 L152.5 150" />
+      <path d="M152.5 150 L173 150 A16 16 0 0 0 205 150 L225 150" />
+    </g>
+  </g>
+
+  <text x="98" y="372" font-family="'Space Grotesk','Helvetica Neue',Arial,sans-serif"
+        font-weight="700" font-size="94" letter-spacing="-2" fill="#ffffff">UrbanRaise</text>
+  <text x="102" y="418" font-family="'Space Grotesk','Helvetica Neue',Arial,sans-serif"
+        font-weight="600" font-size="30" letter-spacing="14" fill="#ffffff" fill-opacity="0.62">BUILDING WORKS</text>
+
+  <line x1="102" y1="450" x2="102" y2="524" stroke="#5b2a86" stroke-width="5" stroke-linecap="round" />
+  <text x="130" y="480" font-family="'Space Grotesk','Helvetica Neue',Arial,sans-serif"
+        font-weight="600" font-size="32" letter-spacing="0.5" fill="#b98fdd">Smart Design, Solid Buildings</text>
+  <text x="130" y="516" font-family="'Space Grotesk','Helvetica Neue',Arial,sans-serif"
+        font-weight="600" font-size="19" letter-spacing="2" fill="#8f8f8f"
+        textLength="760" lengthAdjust="spacingAndGlyphs">CONSTRUCTION &amp; PROPERTY DEVELOPMENT&#160;&#160;·&#160;&#160;ACCRA, GHANA</text>
+</svg>

@@ -22,6 +22,9 @@ export default function Footer() {
             <p className="mt-4 text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
               {site.tagline}
             </p>
+            <p className="mt-4 text-xs text-white/45">
+              Serving {site.areasServed.slice(0, 4).join(', ')} &amp; surrounding areas.
+            </p>
           </div>
 
           <nav className="md:col-span-2" aria-label="Pages">
@@ -39,6 +42,11 @@ export default function Footer() {
               <li>
                 <Link to="/quote" className="transition-colors hover:text-white">
                   Request a Quote
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" className="transition-colors hover:text-white">
+                  FAQ
                 </Link>
               </li>
             </ul>
@@ -108,11 +116,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
-          <p>Serving {site.areasServed.slice(0, 4).join(', ')} &amp; surrounding areas.</p>
+          <nav className="flex gap-4" aria-label="Legal">
+            <Link to="/privacy" className="transition-colors hover:text-white">
+              Privacy
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-white">
+              Terms
+            </Link>
+            <Link to="/faq" className="transition-colors hover:text-white">
+              FAQ
+            </Link>
+          </nav>
         </div>
       </Container>
     </footer>

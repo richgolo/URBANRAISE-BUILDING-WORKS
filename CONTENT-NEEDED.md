@@ -61,7 +61,33 @@ The nine projects currently listed are **fictional samples**. Replace with real 
 - [ ] Choose: Web3Forms / Formspree / EmailJS / serverless function
 - [ ] Provide the form ID / API key / destination inbox
 
-## 8. Launch
+## 8. FAQ — `src/data/faq.js`
 
-- [ ] Domain name + DNS access
-- [ ] Google Analytics / Search Console (if wanted)
+- [ ] Review every answer (marked `faqIsDraft`). Confirm the real position on:
+      staged-payment terms, permit assistance, insurance cover, guarantee /
+      defects period, typical build durations. Then set `faqIsDraft = false`.
+
+## 9. Legal pages — `src/data/legal.js`
+
+- [ ] Have the Privacy Policy & Terms reviewed by a lawyer.
+- [ ] Fill the `[bracketed]` placeholders: company registration number,
+      registered address, privacy contact email.
+- [ ] Company registration number also feeds `site.registration` and the
+      structured data — set it in `src/data/site.js`.
+- [ ] Set `legalIsDraft = false` and update `site.legalUpdated`.
+
+## 10. Domain, SEO & analytics
+
+- [ ] Real domain → replace `https://www.urbanraisebuildingworks.com` in
+      `src/data/site.js` (`url`), `index.html`, `public/sitemap.xml`,
+      `public/robots.txt`.
+- [ ] Decide on analytics — Plausible (cookie-free, recommended) or GA4 — and
+      register with Google Search Console (submit the sitemap).
+- [ ] `public/og-image.png` is a generated placeholder card; swap for one built
+      from a real hero photo if desired (keep it 1200×630).
+
+## 11. Launch
+
+- [ ] Domain + DNS access
+- [ ] Hosting (static host — Netlify / Vercel / Cloudflare Pages); add SPA
+      fallback so deep links like `/faq` resolve.
