@@ -5,11 +5,11 @@ runs on placeholders (clearly marked `⚠️` / "Sample" in the UI and code).
 
 ## 1. Brand & contact — `src/data/site.js`
 
-- [x] Logo — supplied and redrawn as vector (`src/components/ui/Mark.jsx`,
-      `src/assets/urbanraise-mark.svg` / `urbanraise-logo.svg`). Mark + frame are
-      true vector. *Optional:* if you want the exact original wordmark typeface on
-      the master logo file, a designer should convert that text to outline paths
-      — the site itself sets the wordmark live in Space Grotesk.
+- [x] Logo — the supplied artwork is in use (trimmed/resized:
+      `src/assets/urbanraise-logo.png` + `urbanraise-mark.png`).
+      *Recommended:* get the **original vector file** (AI / SVG / EPS) from the
+      logo's designer — the current file is raster and will soften at large print
+      sizes (signage, vehicles, banners).
 - [x] Phone number → +233 54 360 5740 (`phoneDisplay` / `phoneHref`)
 - [x] WhatsApp number → assumed same as phone (`whatsappNumber` = 233543605740).
       Confirm if WhatsApp is a different number.

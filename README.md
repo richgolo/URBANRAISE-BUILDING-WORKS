@@ -90,15 +90,20 @@ Defined as Tailwind theme tokens in `src/index.css` (`@theme`):
 - `line` `#E5E5E5`, `surface` `#F6F5F7`
 - Display font: Space Grotesk · Body: Inter (loaded in `index.html`)
 
-Logo: a vector redraw of the supplied artwork.
-- `src/components/ui/Mark.jsx` — the puzzle-house mark as inline SVG, colours
-  as props (recolours for light / dark / brand grounds).
-- `src/components/ui/Logo.jsx` — `<Mark>` + typographic wordmark (Space Grotesk).
-- `src/assets/urbanraise-mark.svg` — standalone mark (true white gaps).
-- `src/assets/urbanraise-logo.svg` — full lockup: diamond frame + mark +
-  wordmark + tagline. Wordmark is live web-font fitted to width; a designer
-  should outline the type for a final master file.
-- `*.png` alongside — raster exports. `logo-concept-reference.png` — original.
+Logo: the **supplied artwork** (`src/assets/logo-concept-reference.png`),
+trimmed and resized for the web.
+- `src/assets/urbanraise-logo.png` — full lockup (frame + mark + wordmark +
+  tagline), transparent.
+- `src/assets/urbanraise-mark.png` — just the puzzle-house mark, transparent.
+- `src/components/ui/Logo.jsx` — `variant="compact"` (mark + typeset wordmark)
+  in the header; `variant="lockup"` (full artwork) in the footer. On dark
+  backgrounds the purple art is reversed to white with a CSS filter — no
+  separate file.
+- Favicon / OG image are generated from the same art: `src/assets/icon.svg`
+  and `src/assets/og-image.svg` embed the PNGs; regenerate the `public/*.png`
+  outputs with `sips`.
+- It is raster — for large-format print (signage, vehicles) get the original
+  vector (AI/SVG/EPS) from whoever designed the logo. See `CONTENT-NEEDED.md`.
 
-Preview sheet (mark + lockup on every ground, at size):
+Preview sheet (lockup + mark on every ground, at size):
 https://claude.ai/code/artifact/06e15387-6eab-47b9-aa59-6a392c1e0056
