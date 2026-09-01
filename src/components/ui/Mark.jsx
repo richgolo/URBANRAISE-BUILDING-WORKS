@@ -20,12 +20,10 @@ export default function Mark({
       role="img"
       aria-label={title}
     >
-      <path d="M80 250 V124 H66 L152.5 56 L239 124 H225 V250 Z" fill={house} />
-      <g fill="none" stroke={gap} strokeWidth="9" strokeLinecap="round">
-        <path d="M152.5 60 L152.5 84 A16 16 0 0 0 152.5 116 L152.5 150" />
-        <path d="M152.5 150 L152.5 182 A16 16 0 1 0 152.5 214 L152.5 250" />
-        <path d="M80 150 L100 150 A16 16 0 0 1 132 150 L152.5 150" />
-        <path d="M152.5 150 L173 150 A16 16 0 0 0 205 150 L225 150" />
+      <path d="M76 252 V130 H58 L150 58 L242 130 H224 V252 Z" fill={house} />
+      <g fill="none" stroke={gap} strokeWidth="9.5" strokeLinecap="round">
+        <path d="M150 72 L150 94 A15 15 0 1 1 150 110 L150 194 A15 15 0 1 0 150 210 L150 252" />
+        <path d="M76 150 L100 150 A15 15 0 1 0 116 150 L184 150 A15 15 0 1 1 200 150 L224 150" />
       </g>
     </svg>
   )

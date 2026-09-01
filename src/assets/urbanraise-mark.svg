@@ -1,16 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="UrbanRaise Building Works">
   <title>UrbanRaise Building Works — mark</title>
 
-  <!-- house silhouette with slight eave overhang -->
-  <path d="M80 250 V124 H66 L152.5 56 L239 124 H225 V250 Z" fill="#5B2A86" />
+  <!-- house silhouette with eave overhang -->
+  <path d="M76 252 V130 H58 L150 58 L242 130 H224 V252 Z" fill="#5B2A86" />
 
-  <!-- four interlocking puzzle pieces (white gaps) -->
-  <g fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round">
-    <!-- vertical gap: top-left tab pokes right, bottom-right tab pokes left -->
-    <path d="M152.5 60 L152.5 84 A16 16 0 0 0 152.5 116 L152.5 150" />
-    <path d="M152.5 150 L152.5 182 A16 16 0 1 0 152.5 214 L152.5 250" />
-    <!-- horizontal gap: bottom-left tab pokes up, top-right tab pokes down -->
-    <path d="M80 150 L100 150 A16 16 0 0 1 132 150 L152.5 150" />
-    <path d="M152.5 150 L173 150 A16 16 0 0 0 205 150 L225 150" />
+  <!-- four interlocking puzzle pieces: seams drawn as necked jigsaw tabs -->
+  <g fill="none" stroke="#fff" stroke-width="9.5" stroke-linecap="round">
+    <!-- vertical seam: top-left tab pokes right, bottom-right tab pokes left -->
+    <path d="M150 72 L150 94 A15 15 0 1 1 150 110 L150 194 A15 15 0 1 0 150 210 L150 252" />
+    <!-- horizontal seam: bottom-left tab pokes up, top-right tab pokes down -->
+    <path d="M76 150 L100 150 A15 15 0 1 0 116 150 L184 150 A15 15 0 1 1 200 150 L224 150" />
   </g>
 </svg>
